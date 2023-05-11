@@ -23,7 +23,7 @@ const ThankYou = () => {
               <span className="sr-only"></span>Order has been placed
             </h5>
             <p className="text-2xl font-semibold md:text-2xl">Food will be delivered to you soon</p>
-            <Link rel="noopener noreferrer" to="/" className="btn btn-success mt-10 px-8 py-3 font-semibold rounded">Go Back To Shop</Link>
+            <Link rel="noopener noreferrer" to="/" className="btn btn-success mt-10 px-8 py-3 font-semibold rounded">Go Back To Menu</Link>
           </div>
         </div>
       </div>
