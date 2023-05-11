@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import sidePic1 from '../../assets/images/sidePic1.jpg';
+import sidePic2 from '../../assets/images/sidePic2.jpg';
+import sidePic3 from '../../assets/images/sidePic3.jpg';
+import sidePic4 from '../../assets/images/sidePic4.jpg';
+import sidePic5 from '../../assets/images/sidePic5.jpg';
+import sidePic6 from '../../assets/images/sidePic6.jpg';
+import sidePic7 from '../../assets/images/sidePic7.jpg';
 import { deleteShoppingCart } from '../../utilities/localStorage';
-import sidePic1 from '../../assets/images/sidePic1.jpg'
-import sidePic2 from '../../assets/images/sidePic2.jpg'
-import sidePic3 from '../../assets/images/sidePic3.jpg'
-import sidePic4 from '../../assets/images/sidePic4.jpg'
-import sidePic5 from '../../assets/images/sidePic5.jpg'
-import sidePic6 from '../../assets/images/sidePic6.jpg'
-import sidePic7 from '../../assets/images/sidePic7.jpg'
 import SideSlider from './SideSlider';
 
 const sideSliderImages = [
@@ -36,24 +36,19 @@ const sideSliderImages = [
 
 
 const SideCart = ({cart, setCart}) => {
-
+  const navigate = useNavigate();
   const clearAll = () => {
     deleteShoppingCart()
     setCart([]);
   }
-
   let total = 0;
   let quantity = 0;
-
   for(const product of cart){
     quantity = quantity + product.quantity;
     total = total + product.price * product.quantity;
   }
-  
   const vat = (total * 0.05);
   const grandTotal = (total + vat);
-
-  const navigate = useNavigate();
 
   return (
     <div className="sticky top-20 text-white">
@@ -80,9 +75,9 @@ const SideCart = ({cart, setCart}) => {
               </div> 
             </div>
       } 
-        <div className="carousel w-full mt-10 opacity-50">
-          <SideSlider sideSliderImages={sideSliderImages}/>
-        </div>
+      <div className="carousel w-full mt-10 opacity-50">
+        <SideSlider sideSliderImages={sideSliderImages}/>
+      </div>
     </div>
   );
 };

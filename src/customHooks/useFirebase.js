@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import auth from '../firebase.init'
-import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile  } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import auth from '../firebase.init';
 
 const useFirebase = () => {
   const [email,setEmail] = useState('');
@@ -13,7 +13,6 @@ const useFirebase = () => {
   const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
   const [updateProfile, updateError] = useUpdateProfile(auth);
   const [sendPasswordResetEmail, ResetPasswordError] = useSendPasswordResetEmail(auth);
-
   const handleEmailBlur = e => {
     setEmail(e.target.value);
   }
@@ -50,7 +49,6 @@ const useFirebase = () => {
       toast("Please enter your email address")
     }
   }
-
 
   return { 
     email,setEmail,password,setPassword, confirmPassword, setConfirmPassword, error, setError,signInWithEmailAndPassword, emailUser, emailLoading, emailError, signInWithGoogle, googleUser, googleLoading, googleError, createUserWithEmailAndPassword, user, updateProfile, updateError, sendPasswordResetEmail, ResetPasswordError, handleEmailBlur, handlePasswordBlur, handleConfirmPasswordBlur, handleForgetPassword, handleUserSignIn,handleCreateUser

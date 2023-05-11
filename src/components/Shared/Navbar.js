@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import CustomLink from '../Shared/CustomLink'
-import logo from '../../assets/images/logo.png'
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import logo from '../../assets/images/logo.png';
+import auth from '../../firebase.init';
+import CustomLink from '../Shared/CustomLink';
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
     signOut(auth);
   }
-
   const [menu, setMenu] = useState(false);
 
   return (
@@ -38,8 +37,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      
-
         <div>
           <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${menu ? "block" : "hidden"}`}> {/* Menu For Mobile Devices */}
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
@@ -94,15 +91,12 @@ const Navbar = () => {
                   <span className="hover:text-green-300"> Login </span> 
                 </CustomLink>
               </li>
-              }
-              
+              }            
             </ul>
           </div>
         </div>
-
-  </div>
-</nav>
-  
+      </div>
+    </nav>
   );
 };
 

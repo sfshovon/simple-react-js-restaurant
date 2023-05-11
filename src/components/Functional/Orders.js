@@ -1,15 +1,15 @@
 import React from 'react';
-import useProducts from '../../customHooks/useProducts';
-import useCart from '../../customHooks/useCart';
-import Cart from '../Functional/Cart';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import useCart from '../../customHooks/useCart';
+import useProducts from '../../customHooks/useProducts';
 import auth from '../../firebase.init';
+import Cart from '../Functional/Cart';
 import PageTitle from '../Shared/PageTitle';
 
 const Orders = () => {
-    const [products] = useProducts();
-    const [cart, setCart] = useCart(products);
-    const [user] = useAuthState(auth);
+  const [products] = useProducts();
+  const [cart, setCart] = useCart(products);
+  const [user] = useAuthState(auth);
 
   return (
     <div data-theme="luxury" className="h-screen">
@@ -24,7 +24,6 @@ const Orders = () => {
       }
       </div>
     </div>
-
   );
 };
 

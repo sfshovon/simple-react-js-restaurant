@@ -17,4 +17,5 @@ function CustomLink({ children, to, ...props }) {
     </div>
   );
 }
+
 export default CustomLink;

@@ -2,7 +2,6 @@ import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-
 const Product = ({product, addToCart}) => {
   const {pic, title, price, proportion, category} = product;
   return (

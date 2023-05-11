@@ -1,33 +1,31 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import RequireAuth from './components/Auth/RequireAuth';
-import Orders from './components/Functional/Orders';
-import Navbar from './components/Shared/Navbar';
-import Home from './components/Static/Home';
-import Menu from './components/Functional/Menu';
-import Locations from './components/Static/Locations';
-import Hours from './components/Static/Hours';
-import About from './components/Static/About';
-import Login from './components/Auth/Login';
 import ForgetPassword from './components/Auth/ForgetPassword';
+import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import RequireAuth from './components/Auth/RequireAuth';
 import Cart from './components/Functional/Cart';
-import NotFound from './components/Static/NotFound';
-import ThankYou from './components/Static/ThankYou';
 import Delivery from './components/Functional/Delivery';
 import All from './components/Functional/Items/All';
 import Appetizers from './components/Functional/Items/Appetizers';
-import Soup from './components/Functional/Items/Soup';
-import RiceNoodles from './components/Functional/Items/RiceNoodles';
-import Chicken from './components/Functional/Items/Chicken';
 import Beef from './components/Functional/Items/Beef';
-import Seafood from './components/Functional/Items/Seafood';
-import Veggies from './components/Functional/Items/Veggies';
-import Drinks from './components/Functional/Items/Drinks';
+import Chicken from './components/Functional/Items/Chicken';
 import Desserts from './components/Functional/Items/Desserts';
+import Drinks from './components/Functional/Items/Drinks';
+import RiceNoodles from './components/Functional/Items/RiceNoodles';
+import Seafood from './components/Functional/Items/Seafood';
+import Soup from './components/Functional/Items/Soup';
+import Veggies from './components/Functional/Items/Veggies';
+import Menu from './components/Functional/Menu';
+import Orders from './components/Functional/Orders';
+import Navbar from './components/Shared/Navbar';
+import About from './components/Static/About';
+import Home from './components/Static/Home';
+import Hours from './components/Static/Hours';
+import Locations from './components/Static/Locations';
+import NotFound from './components/Static/NotFound';
+import ThankYou from './components/Static/ThankYou';
 
 function App() {
-
   return (
     <div className="App">
      <Navbar/>

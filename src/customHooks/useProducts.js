@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
-
   useEffect( () => {
     fetch('menu.json')
     .then(res => res.json())
